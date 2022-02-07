@@ -2,9 +2,29 @@ package academy.devdojo.maratonajava.javacore.Gassociacao.dominio;
 
 public class Time {
     private String nome;
+    private Jogador[] jogadores;
+
+    public Time(String nome, Jogador[] jogadorees) {
+        this.nome = nome;
+        this.jogadores = jogadorees;
+    }
+
+    public Jogador[] getJogadorees() {
+        return jogadores;
+    }
 
     public void imprime(){
         System.out.println(this.nome);
+        if(jogadores == null){
+            return;
+        }
+        for (Jogador jogador : jogadores) {
+            System.out.println(jogador.getNome());
+        }
+    }
+
+    public void setJogadorees(Jogador[] jogadorees) {
+        this.jogadores = jogadorees;
     }
 
     public Time(String nome) {
