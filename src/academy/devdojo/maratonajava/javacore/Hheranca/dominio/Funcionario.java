@@ -4,8 +4,19 @@ public class Funcionario extends Pessoa{
 
     private double salario;
 
+    static {
+        System.out.println("Dentro do bloco estatico de funcionário");
+    }
+    {
+        System.out.println("Bloco de inicialização de funcionário 1");
+    }
+    {
+        System.out.println("Bloco de inicialização de funcionário 2");
+    }
+
     public Funcionario(String nome){
         super(nome);
+        System.out.println("Dentro do construto de funcionário");
     }
 
     public void imprimi(){
